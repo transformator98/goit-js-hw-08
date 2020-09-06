@@ -37,6 +37,7 @@ refs.overlay.addEventListener('click', onOverlayClick);
 
 function onImagesClick(event) {
   event.preventDefault();
+
   const imagesClick = event.target;
   if (imagesClick.nodeName !== 'IMG') {
     return;
@@ -50,8 +51,7 @@ function setLargeImageSrc(url) {
 }
 
 function onOpenModalWindow() {
-  const imagesClick = event.target;
-  if (imagesClick.nodeName !== 'IMG') {
+  if (event.target.nodeName !== 'IMG') {
     return;
   }
   window.addEventListener('keydown', onPressEscape);
